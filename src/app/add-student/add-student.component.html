@@ -1,0 +1,12 @@
+<h1>Add  New Student </h1>
+<form [formGroup]="addStudent" (ngSubmit)="addNewStudent(addStudent.value)">
+    <input type="text" placeholder="enter name" formControlName="name"><br>
+    <input type="email" placeholder="enter email" formControlName="email"><br>
+    <input type="number" placeholder="enter age" formControlName="age"><br>
+    <input type="radio" formControlName="isMale" value="true" name="gender"> Male
+    <input type="radio" formControlName="isMale" value="false" name="gender"> Female
+
+    <input type="number" placeholder="enter Roll number" formControlName="rollNo"><br>
+    <input type="date"  formControlName="date"><br><br>
+    <button (click)="addNewStudent(addStudent.value)">Submit</button>
+</form>
